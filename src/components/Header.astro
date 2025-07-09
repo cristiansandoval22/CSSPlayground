@@ -1,0 +1,96 @@
+---
+import MdiGithub from "@/icons/MdiGithub.astro";
+import MdiInstagram from "@/icons/MdiInstagram.astro";
+---
+
+<header class="header">
+  <div class="container">
+    <div class="nav-brand">
+      <div class="logo">
+        <span class="logo-text">CSSPlayground</span>
+      </div>
+    </div>
+    <div class="social__container">
+      <a class="social__link" href="https://github.com/cristiansandoval22/CSSPlayground" target="_blank" rel="noopener noreferrer">
+        <MdiGithub />
+      </a>
+      <a class="social__link" href="https://www.instagram.com/codigocreativo2025/" target="_blank" rel="noopener noreferrer">
+        <MdiInstagram />
+      </a>
+    </div>
+  </div>
+</header>
+
+<style>
+  /* Header */
+  .header {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    z-index: 1000;
+    padding: 1rem 0;
+  }
+  
+
+  .header .container {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+  }
+
+  .nav-brand {
+    display: flex;
+    align-items: center;
+  }
+
+  .logo {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    font-weight: 700;
+    font-size: var(--font-size-xl);
+  }
+
+  .logo-text {
+    background: var(--gradient-primary);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+  }
+  .social__container {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+  }
+  .social__link {
+    color: var(--text-primary);
+    font-size: var(--font-size-lg);
+    transition: var(--transition-normal);
+    cursor: pointer;
+  }
+  .header__scroll {
+    background: rgba(10, 10, 15, 0.3);
+    backdrop-filter: blur(16px);
+    border-bottom: 2px solid rgba(255, 255, 255, 0.1);
+  }
+  .header__scroll .logo-text {
+  background: none;
+  -webkit-background-clip: initial;
+  -webkit-text-fill-color: initial;
+  background-clip: initial;
+  color: var(--text-primary);
+}
+</style>
+
+<script>
+  const header = document.querySelector(".header") as HTMLElement;
+
+  window.addEventListener("scroll", () => {
+    if (window.scrollY > 0) {
+      header.classList.add("header__scroll");
+    } else {
+      header.classList.remove("header__scroll");
+    }
+  });
+</script>

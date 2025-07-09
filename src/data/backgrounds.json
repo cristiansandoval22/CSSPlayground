@@ -1,0 +1,110 @@
+[
+  {
+    "slug": "gradiente-suave",
+    "name": "Gradiente Suave",
+    "category": "Gradientes",
+    "css": " background: linear-gradient(135deg, #667eea, #764ba2);"
+  },
+  {
+    "slug": "orb-grid",
+    "name": "Orb + Grid",
+    "category": "Patrones",
+    "css":  "background: #020617; background-image: linear-gradient(to right, rgba(71,85,105,0.15) 1px, transparent 1px), linear-gradient(to bottom, rgba(71,85,105,0.15) 1px, transparent 1px), radial-gradient(circle at 50% 60%, rgba(236,72,153,0.15) 0%, rgba(168,85,247,0.05) 40%, transparent 70%); background-size: 40px 40px, 40px 40px, 100% 100%;" 
+  },
+  {
+    "slug": "gradient-1",
+    "name": "Gradiente 1",
+    "category": "Gradientes",
+    "css": "background: linear-gradient(135deg, #ff006e, #8338ec, #3a86ff);"
+  },
+  {
+    "slug": "gradient-2",
+    "name": "Gradiente con Patrón",
+    "category": "Gradientes",
+    "css": "background: linear-gradient(45deg, #8338ec, #3a86ff);\nposition: relative;\n\n/* Agregar este pseudo-elemento para el patrón */\n&::before {\n    content: '';\n    position: absolute;\n    top: 0;\n    left: 0;\n    right: 0;\n    bottom: 0;\n    background: url(\"data:image/svg+xml,%3Csvg width='60' height='60' viewBox='0 0 60 60' xmlns='http://www.w3.org/2000/svg'%3E%3Cg fill='none' fill-rule='evenodd'%3E%3Cg fill='%23ffffff' fill-opacity='0.1'%3E%3Cpath d='M36 34v-4h-2v4h-4v2h4v4h2v-4h4v-2h-4zm0-30V0h-2v4h-4v2h4v4h2V6h4V4h-4zM6 34v-4H4v4H0v2h4v4h2v-4h4v-2H6zM6 4V0H4v4H0v2h4v4h2V6h4V4H6z'/%3E%3C/g%3E%3C/g%3E%3C/svg%3E\");\n}"
+  },
+  {
+    "slug": "geometric-1",
+    "name": "Geométrico 1",
+    "category": "Geométricos",
+    "css": "background: #1a1a2e;\nbackground-image: \n    linear-gradient(45deg, #ff006e 25%, transparent 25%), \n    linear-gradient(-45deg, #ff006e 25%, transparent 25%), \n    linear-gradient(45deg, transparent 75%, #8338ec 75%), \n    linear-gradient(-45deg, transparent 75%, #8338ec 75%);\nbackground-size: 20px 20px;\nbackground-position: 0 0, 0 10px, 10px -10px, -10px 0px;"
+  },
+  {
+    "slug": "mesh-1",
+    "name": "Mesh 1",
+    "category": "Mesh",
+    "css": "background: radial-gradient(circle at 25% 25%, #3a86ff 0%, transparent 50%),\n            radial-gradient(circle at 75% 75%, #06ffa5 0%, transparent 50%),\n            linear-gradient(135deg, #0a0a0f, #1a1a2e);"
+  },
+  {
+    "slug": "radial-1",
+    "name": "Radial 1",
+    "category": "Radiales",
+    "css": "background: radial-gradient(circle at center, #ff006e, #8338ec, #0a0a0f);"
+  },
+  {
+    "slug": "noise-1",
+    "name": "Ruido 1",
+    "category": "Texturas",
+    "css": "background: #0a0a0f;\nbackground-image: \n    radial-gradient(circle at 1px 1px, rgba(255,255,255,0.15) 1px, transparent 0); background-size: 20px 20px;"
+  },
+  {
+    "slug": "gradiente-amanecer",
+    "name": "Gradiente Amanecer",
+    "category": "Gradientes",
+    "css": "background: linear-gradient(135deg, #ff9a9e 0%, #fad0c4 99%, #fad0c4 100%); "
+  },
+  {
+    "slug": "gradiente-oceanico",
+    "name": "Gradiente Oceánico",
+    "category": "Gradientes",
+    "css": "background: linear-gradient(to top, #30cfd0 0%, #330867 100%); "
+  },
+  {
+    "slug": "patron-cuadricula",
+    "name": "Patrón Cuadrícula",
+    "category": "Patrones",
+    "css": "background-color: #1e293b; background-image: linear-gradient(to right, rgba(255,255,255,0.05) 1px, transparent 1px), linear-gradient(to bottom, rgba(255,255,255,0.05) 1px, transparent 1px); background-size: 40px 40px; "
+  },
+  {
+    "slug": "mesh-vibrante",
+    "name": "Mesh Vibrante",
+    "category": "Mesh",
+    "css": "background: radial-gradient(circle at 20% 20%, #ff6ec4, transparent 50%), radial-gradient(circle at 80% 80%, #7873f5, transparent 50%), linear-gradient(135deg, #0f2027, #203a43, #2c5364); "
+  },
+  {
+    "slug": "orb-magenta",
+    "name": "Orb Magenta",
+    "category": "Orbs",
+    "css": "background: #020617; background-image: linear-gradient(to right, rgba(71,85,105,0.15) 1px, transparent 1px), linear-gradient(to bottom, rgba(71,85,105,0.15) 1px, transparent 1px), radial-gradient(circle at 50% 60%, rgba(236,72,153,0.15) 0%, rgba(168,85,247,0.05) 40%, transparent 70%); background-size: 40px 40px, 40px 40px, 100% 100%; "
+  },
+  {
+    "slug": "ruido-sutil",
+    "name": "Ruido Sutil",
+    "category": "Texturas",
+    "css": "background-color: #111827; background-image: radial-gradient(circle at 1px 1px, rgba(255,255,255,0.05) 1px, transparent 0); background-size: 20px 20px;"
+  },
+  {
+    "slug": "gradiente-fuego",
+    "name": "Gradiente Fuego",
+    "category": "Gradientes",
+    "css": "background: linear-gradient(45deg, #f12711, #f5af19); "
+  },
+  {
+    "slug": "diagonales-neon",
+    "name": "Diagonales Neón",
+    "category": "Patrones",
+    "css": "background-color: #0f0f0f; background-image: repeating-linear-gradient(45deg, rgba(0,255,255,0.1) 0 2px, transparent 2px 4px);"
+  },
+  {
+    "slug": "glassmorphism",
+    "name": "Glassmorphism",
+    "category": "Efectos",
+    "css": "background: linear-gradient(135deg, rgba(255,255,255,0.1), rgba(255,255,255,0)); backdrop-filter: blur(10px);"
+  },
+  {
+    "slug": "radial-aurora",
+    "name": "Radial Aurora",
+    "category": "Radiales",
+    "css": "background: radial-gradient(circle at center, #00c6ff, #0072ff, #004d99);"
+  }
+]

@@ -1,0 +1,63 @@
+---
+import BackgroundCard from "@/components/BackgroundCard.astro";
+import backgrounds from '@/data/backgrounds.json';
+---
+
+
+<!-- Backgrounds Gallery -->
+<section class="gallery" id="fondos">
+  <div class="container">
+    <div class="section-header">
+      <h2 class="section-title">Explora los Fondos</h2>
+      <p class="section-description">
+        Haz clic en cualquier fondo para copiar su código CSS
+      </p>
+    </div>
+
+    <div class="backgrounds-grid">
+      {backgrounds.map((background) => (
+        <BackgroundCard
+          name={background.name}
+          css={background.css}
+          slug={background.slug}
+        />
+      ))}
+    </div>
+  </div>
+</section>
+
+
+<style>
+    /* Gallery Section */
+  .gallery {
+    padding: var(--section-padding);
+  }
+
+  .section-header {
+    text-align: center;
+    margin-bottom: 4rem;
+  }
+
+  .section-title {
+    font-size: var(--font-size-3xl);
+    font-weight: 700;
+    margin-bottom: 1rem;
+  }
+
+  .section-description {
+    font-size: var(--font-size-lg);
+    color: var(--text-secondary);
+    max-width: 500px;
+    margin: 0 auto;
+  }
+
+  .backgrounds-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 2rem;
+  }
+
+  
+
+
+</style>
