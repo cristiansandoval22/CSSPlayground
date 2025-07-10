@@ -29,15 +29,12 @@
     transparent 0
   );
   background-size: 20px 20px;
-  background-attachment: fixed;
 }
 .gradiente-amanecer {
   background: linear-gradient(135deg, #ff9a9e 0%, #fad0c4 99%, #fad0c4 100%);
-  background-attachment: fixed;
 }
 .gradiente-oceanico {
   background: linear-gradient(to top, #30cfd0 0%, #330867 100%);
-  background-attachment: fixed;
 }
 .patron-cuadricula {
   background-color: #1e293b;
@@ -48,13 +45,11 @@
     ),
     linear-gradient(to bottom, rgba(255, 255, 255, 0.05) 1px, transparent 1px);
   background-size: 40px 40px;
-  background-attachment: fixed;
 }
 .mesh-vibrante {
   background: radial-gradient(circle at 20% 20%, #ff6ec4, transparent 50%),
     radial-gradient(circle at 80% 80%, #7873f5, transparent 50%),
     linear-gradient(135deg, #0f2027, #203a43, #2c5364);
-  background-attachment: fixed;
 }
 .orb-magenta {
   background: #020617;
@@ -81,11 +76,9 @@
     transparent 0
   );
   background-size: 20px 20px;
-  background-attachment: fixed;
 }
 .gradiente-fuego {
   background: linear-gradient(45deg, #f12711, #f5af19);
-  background-attachment: fixed;
 }
 .glassmorphism {
   background: linear-gradient(
@@ -94,13 +87,10 @@
     rgba(255, 255, 255, 0)
   );
   backdrop-filter: blur(10px);
-  background-attachment: fixed;
 }
 .radial-aurora {
   background: radial-gradient(circle at center, #00c6ff, #0072ff, #004d99);
-  background-attachment: fixed;
 }
 .crimson-depth {
   background: radial-gradient(125% 125% at 50% 100%, #000000 40%, #2b0707 100%);
-  background-attachment: fixed;
 }
