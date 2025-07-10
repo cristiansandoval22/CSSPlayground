@@ -72,20 +72,5 @@
     padding: 0 1rem;
   }
 
-  body {
-    background: radial-gradient(
-        80% 60% at 50% 0%,
-        rgba(236, 72, 153, 0.25),
-        transparent 70%
-      ),
-      rgb(0, 0, 0);
-
-    background-image: radial-gradient(
-      circle at 1px 1px,
-      rgba(255, 255, 255, 0.15) 1px,
-      transparent 0
-    );
-    background-size: 20px 20px;
-    background-attachment: fixed;
-  }
+  body { background: #020617; background-image: linear-gradient(to right, rgba(71,85,105,0.15) 1px, transparent 1px), linear-gradient(to bottom, rgba(71,85,105,0.15) 1px, transparent 1px), radial-gradient(circle at 50% 60%, rgba(236,72,153,0.15) 0%, rgba(168,85,247,0.05) 40%, transparent 70%); background-size: 40px 40px, 40px 40px, 100% 100%; background-attachment: fixed; }
 
