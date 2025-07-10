@@ -1,4 +1,5 @@
 ---
+import Analytics from "@/components/Analytics.astro";
 import "@fontsource/poppins";
 import "@/styles/Globals.css";
 import "@/styles/gradients.css";
@@ -15,17 +16,7 @@ import Footer from "@/components/Footer.astro";
     <meta name="generator" content={Astro.generator} />
     <title>CSSPlayground</title>
   </head>
-  <script async src="https://www.googletagmanager.com/gtag/js?id=G-4W8N5S9V27"
-  ></script>
-  <script
-    set:html={`
-      window.dataLayer = window.dataLayer || [];
-      function gtag(){dataLayer.push(arguments);}
-      gtag('js', new Date());
-      gtag('config', 'G-4W8N5S9V27');
-    `}
-  />
-  <!-- Fin Google Analytics -->
+  <Analytics />
   <body>
     <Header />
     <main>
