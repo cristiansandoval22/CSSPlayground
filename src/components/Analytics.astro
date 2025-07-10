@@ -1,23 +1,14 @@
 ---
 // Importa la variable pública del entorno
-const gaId = import.meta.env.PUBLIC_GOOGLE_ANALYTICS_ID || "G-4W8N5S9V27";
+const gaId = import.meta.env.PUBLIC_GOOGLE_ANALYTICS_ID || "G-DGLYN3BLJ9";
 ---
-
-{
-  gaId && (
-    <>
-      <script
-        async
-        src={`https://www.googletagmanager.com/gtag/js?id=${gaId}`}
-      />
-      <script
-        set:html={` 
-        window.dataLayer = window.dataLayer || [];
-        function gtag(){dataLayer.push(arguments);}
-        gtag('js', new Date());
-        gtag('config', '${gaId}');
-      `}
-      />
-    </>
-  )
-}
+{gaId &&
+<>
+<script async src= {`https://www.googletagmanager.com/gtag/js?id=${gaId}`} ></script>
+  <script set:html={`
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+    gtag('config', '${gaId}');
+  `}></script>
+</>}
