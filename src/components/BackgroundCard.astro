@@ -4,7 +4,7 @@ const { name, slug, css } = Astro.props;
 ---
 
 <div class="bg-card">
-  <div class="bg-preview" style={css}></div>
+  <div class={`bg-preview ${slug}`}></div>
   <div class="bg-info">
     <h3 class="bg-name">{name}</h3>
     <button class="copy-btn" data-slug={slug} data-css={css}>
@@ -72,31 +72,31 @@ const { name, slug, css } = Astro.props;
     border-color: transparent;
     transform: scale(1.05);
   }
+
+  
 </style>
 
-
 <script>
-  
-    const btns = document.querySelectorAll('.copy-btn');
+  const btns = document.querySelectorAll(".copy-btn");
 
-    btns.forEach(btn => {
-      btn.addEventListener('click', () => {
-        const css = btn.getAttribute('data-css') as string;
-        showCopyFeedback()
-        const cssText = css;
-        
-        const textToCopy = `body {\n ${cssText} \n}`
-        // const body = document.querySelector('body') as HTMLElement;
-        // body.style.cssText = cssText;
-        navigator.clipboard.writeText(textToCopy)
-      });
+  btns.forEach((btn) => {
+    btn.addEventListener("click", () => {
+      const css = btn.getAttribute("data-css") as string;
+      showCopyFeedback();
+      const cssText = css;
+
+      const textToCopy = `body { ${cssText} }`;
+      // const body = document.querySelector('body') as HTMLElement;
+      // body.style.cssText = cssText;
+      navigator.clipboard.writeText(textToCopy);
     });
+  });
 
-    // Mostrar feedback visual cuando se copia
+  // Mostrar feedback visual cuando se copia
   function showCopyFeedback() {
     // Crear elemento de notificación
-    const notification = document.createElement("div")
-    notification.textContent = "✅ ¡Código copiado al portapapeles!"
+    const notification = document.createElement("div");
+    notification.textContent = "✅ ¡Código copiado al portapapeles!";
     notification.style.cssText = `
           position: fixed;
           bottom: 20px;
@@ -110,22 +110,21 @@ const { name, slug, css } = Astro.props;
           box-shadow: 0 10px 25px rgba(0, 0, 0, 0.2);
           transform: translateX(100%);
           transition: transform 0.3s ease;
-      `
-  
-    document.body.appendChild(notification)
-  
+      `;
+
+    document.body.appendChild(notification);
+
     // Animar entrada
     setTimeout(() => {
-      notification.style.transform = "translateX(0)"
-    }, 100)
-  
+      notification.style.transform = "translateX(0)";
+    }, 100);
+
     // Animar salida y remover
     setTimeout(() => {
-      notification.style.transform = "translateX(100%)"
+      notification.style.transform = "translateX(100%)";
       setTimeout(() => {
-        document.body.removeChild(notification)
-      }, 300)
-    }, 2000)
+        document.body.removeChild(notification);
+      }, 300);
+    }, 2000);
   }
-  
 </script>
