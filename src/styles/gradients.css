@@ -88,7 +88,11 @@
   background-attachment: fixed;
 }
 .glassmorphism {
-  background: linear-gradient(135deg, rgba(255, 255, 255, 0.1), rgba(255, 255, 255, 0));
+  background: linear-gradient(
+    135deg,
+    rgba(255, 255, 255, 0.1),
+    rgba(255, 255, 255, 0)
+  );
   backdrop-filter: blur(10px);
   background-attachment: fixed;
 }
@@ -97,10 +101,6 @@
   background-attachment: fixed;
 }
 .crimson-depth {
-  background: radial-gradient(
-    125% 125% at 50% 100%,
-    #000000 40%,
-    #2b0707 100%
-  );
+  background: radial-gradient(125% 125% at 50% 100%, #000000 40%, #2b0707 100%);
   background-attachment: fixed;
 }
