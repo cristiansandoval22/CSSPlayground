@@ -1,5 +1,5 @@
 ---
-const props = Astro.props;
+const { class: className = "" } = Astro.props;
 ---
 
 <svg
@@ -7,7 +7,7 @@ const props = Astro.props;
   width="24"
   height="24"
   viewBox="0 0 24 24"
-  {...props}
+  class={className}
 >
   <g
     fill="none"
