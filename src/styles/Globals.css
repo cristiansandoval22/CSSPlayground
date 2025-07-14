@@ -1,76 +1,107 @@
+:root {
+  /* Colores principales */
+  --bg-primary: #0a0a0f;
+  --bg-secondary: #1a1a2e;
+  --bg-card: #16213e;
+  --text-primary: #ffffff;
+  --text-secondary: #a0a0a0;
+  --accent-magenta: #ff006e;
+  --accent-violet: #8338ec;
+  --accent-blue: #3a86ff;
+  --accent-cyan: #06ffa5;
 
-  :root {
-    /* Colores principales */
-    --bg-primary: #0a0a0f;
-    --bg-secondary: #1a1a2e;
-    --bg-card: #16213e;
-    --text-primary: #ffffff;
-    --text-secondary: #a0a0a0;
-    --accent-magenta: #ff006e;
-    --accent-violet: #8338ec;
-    --accent-blue: #3a86ff;
-    --accent-cyan: #06ffa5;
+  /* Gradientes */
+  --gradient-primary: linear-gradient(
+    135deg,
+    var(--accent-magenta),
+    var(--accent-violet)
+  );
+  --gradient-secondary: linear-gradient(
+    135deg,
+    var(--accent-violet),
+    var(--accent-blue)
+  );
 
-    /* Gradientes */
-    --gradient-primary: linear-gradient(
-      135deg,
-      var(--accent-magenta),
-      var(--accent-violet)
+  /* Espaciado */
+  --container-max-width: 1200px;
+  --section-padding: 4rem 0;
+  --card-padding: 1.5rem;
+
+  /* Tipografía */
+  --font-family: "Poppins", sans-serif;
+  --font-size-xs: 0.75rem;
+  --font-size-sm: 0.875rem;
+  --font-size-base: 1rem;
+  --font-size-lg: 1.125rem;
+  --font-size-xl: 1.25rem;
+  --font-size-2xl: 1.5rem;
+  --font-size-3xl: 2rem;
+  --font-size-4xl: 2.5rem;
+
+  /* Sombras */
+  --shadow-sm: 0 1px 2px rgba(0, 0, 0, 0.05);
+  --shadow-md: 0 4px 6px rgba(0, 0, 0, 0.1);
+  --shadow-lg: 0 10px 15px rgba(0, 0, 0, 0.1);
+  --shadow-xl: 0 20px 25px rgba(0, 0, 0, 0.15);
+
+  /* Transiciones */
+  --transition-fast: 0.15s ease;
+  --transition-normal: 0.3s ease;
+  --transition-slow: 0.5s ease;
+}
+
+/* Reset y Variables */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+/* Estilos base */
+body {
+  font-family: var(--font-family);
+  color: var(--text-primary);
+  line-height: 1.6;
+  overflow-x: hidden;
+}
+
+.container {
+  max-width: var(--container-max-width);
+  margin: 0 auto;
+  padding: 0 1rem;
+}
+
+body {
+  background: #020617;
+  background-image: linear-gradient(
+      to right,
+      rgba(71, 85, 105, 0.15) 1px,
+      transparent 1px
+    ),
+    linear-gradient(to bottom, rgba(71, 85, 105, 0.15) 1px, transparent 1px),
+    radial-gradient(
+      circle at 50% 60%,
+      rgba(236, 72, 153, 0.15) 0%,
+      rgba(168, 85, 247, 0.05) 40%,
+      transparent 70%
     );
-    --gradient-secondary: linear-gradient(
-      135deg,
-      var(--accent-violet),
-      var(--accent-blue)
-    );
+  background-size: 40px 40px, 40px 40px, 100% 100%;
+  background-attachment: fixed;
+}
 
-    /* Espaciado */
-    --container-max-width: 1200px;
-    --section-padding: 4rem 0;
-    --card-padding: 1.5rem;
-
-    /* Tipografía */
-    --font-family: "Poppins", sans-serif;
-    --font-size-xs: 0.75rem;
-    --font-size-sm: 0.875rem;
-    --font-size-base: 1rem;
-    --font-size-lg: 1.125rem;
-    --font-size-xl: 1.25rem;
-    --font-size-2xl: 1.5rem;
-    --font-size-3xl: 2rem;
-    --font-size-4xl: 2.5rem;
-
-    /* Sombras */
-    --shadow-sm: 0 1px 2px rgba(0, 0, 0, 0.05);
-    --shadow-md: 0 4px 6px rgba(0, 0, 0, 0.1);
-    --shadow-lg: 0 10px 15px rgba(0, 0, 0, 0.1);
-    --shadow-xl: 0 20px 25px rgba(0, 0, 0, 0.15);
-
-    /* Transiciones */
-    --transition-fast: 0.15s ease;
-    --transition-normal: 0.3s ease;
-    --transition-slow: 0.5s ease;
-  }
-
-  /* Reset y Variables */
-  * {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-  }
-
-  /* Estilos base */
-  body {
-    font-family: var(--font-family);
-    color: var(--text-primary);
-    line-height: 1.6;
-    overflow-x: hidden;
-  }
-
-  .container {
-    max-width: var(--container-max-width);
-    margin: 0 auto;
-    padding: 0 1rem;
-  }
-
-  body { background: #020617; background-image: linear-gradient(to right, rgba(71,85,105,0.15) 1px, transparent 1px), linear-gradient(to bottom, rgba(71,85,105,0.15) 1px, transparent 1px), radial-gradient(circle at 50% 60%, rgba(236,72,153,0.15) 0%, rgba(168,85,247,0.05) 40%, transparent 70%); background-size: 40px 40px, 40px 40px, 100% 100%; background-attachment: fixed; }
+.header__social__icon {
+  width: 2rem;
+  height: 2rem;
+  transition: all 0.3s ease-in-out;
+  cursor: pointer;
+}
+.header__social__icon:hover {
+  transform: scale(1.1);
+}
+.copy-icon {
+    width: 1rem;
+    height: 1rem;
+    transition: all 0.3s ease-in-out;
+    cursor: pointer;
+}
 

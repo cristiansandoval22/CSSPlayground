@@ -11,11 +11,21 @@ import MdiInstagram from "@/icons/MdiInstagram.astro";
       </div>
     </div>
     <div class="social__container">
-      <a class="social__link" href="https://github.com/cristiansandoval22/CSSPlayground" target="_blank" rel="noopener noreferrer">
-        <MdiGithub />
+      <a
+        class="social__link"
+        href="https://github.com/cristiansandoval22/CSSPlayground"
+        target="_blank"
+        rel="noopener noreferrer"
+      >
+        <MdiGithub class="header__social__icon" />
       </a>
-      <a class="social__link" href="https://www.instagram.com/codigocreativo2025/" target="_blank" rel="noopener noreferrer">
-        <MdiInstagram />
+      <a
+        class="social__link"
+        href="https://www.instagram.com/codigocreativo2025/"
+        target="_blank"
+        rel="noopener noreferrer"
+      >
+        <MdiInstagram class="header__social__icon" />
       </a>
     </div>
   </div>
@@ -31,7 +41,6 @@ import MdiInstagram from "@/icons/MdiInstagram.astro";
     z-index: 1000;
     padding: 1rem 0;
   }
-  
 
   .header .container {
     display: flex;
@@ -75,12 +84,13 @@ import MdiInstagram from "@/icons/MdiInstagram.astro";
     border-bottom: 2px solid rgba(255, 255, 255, 0.1);
   }
   .header__scroll .logo-text {
-  background: none;
-  -webkit-background-clip: initial;
-  -webkit-text-fill-color: initial;
-  background-clip: initial;
-  color: var(--text-primary);
-}
+    background: none;
+    -webkit-background-clip: initial;
+    -webkit-text-fill-color: initial;
+    background-clip: initial;
+    color: var(--text-primary);
+  }
+  
 </style>
 
 <script>

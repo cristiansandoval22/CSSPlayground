@@ -8,16 +8,15 @@ const { name, slug, css } = Astro.props;
   <div class="bg-info">
     <h3 class="bg-name">{name}</h3>
     <button class="copy-btn" data-slug={slug} data-css={css}>
-      <span class="copy-icon">
-        <TablerCopy />
-      </span>
+        <TablerCopy class="copy-icon" />
       Copiar CSS
     </button>
   </div>
 </div>
 
 <style>
-  .bg-card {
+
+.bg-card {
     background: var(--bg-card);
     border-radius: 1rem;
     padding: var(--card-padding);
@@ -36,8 +35,7 @@ const { name, slug, css } = Astro.props;
     height: 200px;
     border-radius: 0.75rem;
     margin-bottom: 1rem;
-    position: relative;
-    overflow: hidden;
+    border: 1px solid rgba(255, 255, 255, 0.5);
   }
 
   .bg-info {
@@ -47,7 +45,7 @@ const { name, slug, css } = Astro.props;
   }
 
   .bg-name {
-    font-size: var(--font-size-lg);
+    font-size: var(--font-size-sm);
     font-weight: 600;
     margin: 0;
   }
@@ -56,7 +54,7 @@ const { name, slug, css } = Astro.props;
     background: rgba(255, 255, 255, 0.1);
     color: var(--text-primary);
     border: 1px solid rgba(255, 255, 255, 0.2);
-    padding: 0.5rem 1rem;
+    padding:5px 10px;
     border-radius: 0.5rem;
     font-size: var(--font-size-sm);
     cursor: pointer;
@@ -71,6 +69,14 @@ const { name, slug, css } = Astro.props;
     border-color: transparent;
     transform: scale(1.05);
   }
+ @media screen and (min-width: 768px) {
+  .bg-name {
+    font-size: var(--font-size-base );
+  }
+  .copy-btn {
+    padding:0.5rem 1rem;
+  }
+ }
 
   
 </style>
